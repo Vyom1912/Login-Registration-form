@@ -1,142 +1,211 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>login/registration form</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <header>
-    <nav class="navbar flex flex-r h-nav-resp">
-      <a href="index.html" class="logo">BARBIE</a>
-      <ul class="nav-list flex flex-r v-class-resp">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#home">about me</a></li>
-        <li><a href="#home">contect</a></li>
-        <li><a href="#home">Register</a></li>
-        <div class="search v-class-resp">
-          <input type="text" name="" id="" />
-          <button class="btn btn-res">Search</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login- regidtration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="image/barbie.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar flex flex-r h-nav-resp">
+        <a href="index.html" class="logo">BARBIE</a>
+        <ul class="nav-list flex flex-r v-class-resp">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#home">about me</a></li>
+          <li><a href="#home">contect</a></li>
+          <li><a href="#home">Register</a></li>
+          <div class="search v-class-resp">
+            <input type="text" name="" id="" />
+            <button class="btn btn-res">Search</button>
+          </div>
+        </ul>
+        <div class="burger flex flex-c">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
-      </ul>
-      <div class="burger flex flex-c">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <script src="script.js"></script>
-    </nav>
-  </header>
+        <script>
+          burger = document.querySelector(".burger");
+          navbar = document.querySelector(".navbar");
+          navList = document.querySelector(".nav-list");
+          search = document.querySelector(".search");
 
-  <main>
-    <!-- ---------------------------------------- -->
+          burger.addEventListener("click", () => {
+            search.classList.toggle("v-class-resp");
+            navList.classList.toggle("v-class-resp");
+            navbar.classList.toggle("h-nav-resp");
+          });
+        </script>
+      </nav>
+    </header>
 
-    <!-- login page start -->
-    <div class="rag-login-main-block flex">
-      <div class="regi-login-container">
-        <section class="user-container login-section--display">
-          <div class="registration">
-            <div class="grid-two--column">
-              <div class="form-text flex flex-c">
-                <h2>Welcome Back!</h2>
-                <p>
-                  To keep connected with us please login with your personal
-                  Acoount info
-                </p>
-                <button class="login-btn">Login Here</button>
-              </div>
-              <div class="registration-form flex flex-c">
-                <h2>Create Account</h2>
-                <div class="social-icons">
-                  <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a><a
-                    href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-
-                  <a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+    <main>
+      <!-- login page start -->
+      <div class="rag-login-main-block flex">
+        <div class="regi-login-container">
+          <section class="user-container login-section--display">
+            <div class="registration">
+              <div class="grid-two--column">
+                <div class="form-text flex flex-c">
+                  <h2>Welcome Back!</h2>
+                  <p>
+                    To keep connected with us please login with your personal
+                    Acoount info
+                  </p>
+                  <button class="login-btn">Login Here</button>
                 </div>
-                <p>Or use your email for regidtration</p>
+                <div class="registration-form flex flex-c">
+                  <h2>Create Account</h2>
+                  <div class="social-icons">
+                    <a href="https://twitter.com/" target="_blank"
+                      ><i class="fa-brands fa-twitter"></i></a
+                    ><a href="https://www.linkedin.com/" target="_blank"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                    <a href="https://instagram.com/" target="_blank"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
 
-                <form action="#">
-                  <div class="input-field">
-                    <label for="username">
-                      <input type="text" name="" id="username" placeholder="Name" required /></label>
+                    <a href="https://discord.com/" target="_blank"
+                      ><i class="fa-brands fa-discord"></i
+                    ></a>
                   </div>
-                  <div class="input-field">
-                    <label for="Email">
-                      <input type="email" name="" id="Email" placeholder="E-mail" required /></label>
-                  </div>
-                  <div class="input-field">
-                    <label for="Password">
-                      <input type="password" name="" id="Password" placeholder="Password" required /></label>
-                  </div>
-                  <div class="input-field">
-                    <input type="submit" name="" value="Register" />
-                  </div>
-                </form>
+                  <p>Or use your email for regidtration</p>
+
+                  <form action="#">
+                    <div class="input-field">
+                      <label for="username">
+                        <input
+                          type="text"
+                          name=""
+                          id="username"
+                          placeholder="Name"
+                          required
+                      /></label>
+                    </div>
+                    <div class="input-field">
+                      <label for="Email">
+                        <input
+                          type="email"
+                          name=""
+                          id="Email"
+                          placeholder="E-mail"
+                          required
+                      /></label>
+                    </div>
+                    <div class="input-field">
+                      <label for="Password">
+                        <input
+                          type="password"
+                          name=""
+                          id="Password"
+                          placeholder="Password"
+                          required
+                      /></label>
+                    </div>
+                    <div class="input-field">
+                      <input type="submit" name="" value="Register" />
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- login start  -->
-          <div class="login">
-            <div class="grid-two--column">
-              <div class="form-text flex flex-c">
-                <h2>Hello Friends!</h2>
-                <p>Enter your personal details and start journey with us</p>
-                <button class="registration-btn">Registrer Here</button>
-              </div>
-              <div class="login-form flex flex-c">
-                <h2>Sign In</h2>
-                <div class="social-icons">
-                  <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a><a
-                    href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-
-                  <a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <!-- login start  -->
+            <div class="login">
+              <div class="grid-two--column">
+                <div class="form-text flex flex-c">
+                  <h2>Hello Friends!</h2>
+                  <p>Enter your personal details and start journey with us</p>
+                  <button class="registration-btn">Registrer Here</button>
                 </div>
-                <p>Or use your Account</p>
+                <div class="login-form flex flex-c">
+                  <h2>Sign In</h2>
+                  <div class="social-icons">
+                    <a href="https://twitter.com/" target="_blank"
+                      ><i class="fa-brands fa-twitter"></i></a
+                    ><a href="https://www.linkedin.com/" target="_blank"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                    <a href="https://instagram.com/" target="_blank"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
 
-                <form action="#">
-                  <div class="input-field">
-                    <label for="username">
-                      <input type="text" name="" id="username" placeholder="Name /not required / OR" /></label>
+                    <a href="https://discord.com/" target="_blank"
+                      ><i class="fa-brands fa-discord"></i
+                    ></a>
                   </div>
-                  <div class="input-field">
-                    <label for="Email1">
-                      <input type="email" name="" id="Email1" placeholder="E-mail" required /></label>
-                  </div>
-                  <div class="input-field">
-                    <label for="Password1">
-                      <input type="password" name="" id="Password1" placeholder="Password" required /></label>
-                  </div>
+                  <p>Or use your Account</p>
 
-                  <div class="input-field">
-                    <input type="submit" name="" value="Login" />
-                  </div>
-                </form>
+                  <form action="#">
+                    <div class="input-field">
+                      <label for="username">
+                        <input
+                          type="text"
+                          name=""
+                          id="username"
+                          placeholder="Name /not required / OR"
+                      /></label>
+                    </div>
+                    <div class="input-field">
+                      <label for="Email1">
+                        <input
+                          type="email"
+                          name=""
+                          id="Email1"
+                          placeholder="E-mail"
+                          required
+                      /></label>
+                    </div>
+                    <div class="input-field">
+                      <label for="Password1">
+                        <input
+                          type="password"
+                          name=""
+                          id="Password1"
+                          placeholder="Password"
+                          required
+                      /></label>
+                    </div>
+
+                    <div class="input-field">
+                      <input type="submit" name="" value="Login" />
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+        <script src="script.js"></script>
       </div>
-      <script src="form.js"></script>
-    </div>
-  </main>
-  <footer class="footer flex flex-r">
-    <div class="copy-right">
-      <span>&#169;</span> copy right own by Vyom Patel
-    </div>
-    <div class="footer-icons flex flex-r">
-      <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a><a
-        href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </main>
+    <footer class="footer flex flex-r">
+      <div class="copy-right">
+        <span>&#169;</span> copy right own by Vyom Patel
+      </div>
+      <div class="footer-icons flex flex-r">
+        <a href="https://twitter.com/" target="_blank"
+          ><i class="fa-brands fa-twitter"></i></a
+        ><a href="https://www.linkedin.com/" target="_blank"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="https://instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
 
-      <a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a>
-    </div>
-  </footer>
-</body>
-
+        <a href="https://discord.com/" target="_blank"
+          ><i class="fa-brands fa-discord"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
 </html>
